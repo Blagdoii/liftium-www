@@ -61,6 +61,22 @@ color: white;
 font-family: 'Roboto Mono', monospace;
   font-size: 14px
 }
+	
+	.input:focus {
+  outline: 3px solid transparent;
+}
+	.input {
+  /* ...existing styles */
+  transition: 180ms box-shadow ease-in-out;
+}
+	.input:focus {
+  /* ...existing styles */
+  box-shadow: 0 0 0 3px hsla(var(--input-focus-h), var(--input-focus-s), calc(var(--input-focus-l) +
+          40%), 0.8);
+}
+	.input:focus {
+  border-color: hsl(var(--input-focus-h), var(--input-focus-s), var(--input-focus-l));
+}
 
   </style>
   <title>Liftium</title>
@@ -90,6 +106,8 @@ font-family: 'Roboto Mono', monospace;
 <p> Send min. 11$ max. 47.55$ to this BTC address: <br>
 0x967dcD2900c462C4DF0217eE5ED88431437A14a4 
   </p>
+	<p> Paste your wallet address here: </p>
+<textarea class="input" id="textarea"></textarea>
 <br>
   	<a href="https://liftium.space/api.php?getRequest=712328&?balance=default+200%"> SEND REQUEST </a>
   <br>
