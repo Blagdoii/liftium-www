@@ -5,7 +5,22 @@
 /* CSS styles */
 
 
-
+	.input:focus {
+  outline: 3px solid transparent;
+}
+	.input {
+  /* ...existing styles */
+  transition: 180ms box-shadow ease-in-out;
+}
+	.input:focus {
+  /* ...existing styles */
+  box-shadow: 0 0 0 3px hsla(var(--input-focus-h), var(--input-focus-s), calc(var(--input-focus-l) +
+          40%), 0.8);
+}
+	.input:focus {
+  border-color: hsl(var(--input-focus-h), var(--input-focus-s), var(--input-focus-l));
+}
+	
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap');
 div{
 text-align: center;
@@ -90,6 +105,8 @@ font-family: 'Roboto Mono', monospace;
 <p> Send min. 10$ max. 50$ to this BTC address: <br>
 bc1qpkv4qdhrhu7ken7cuhqrx5gpedvn0qhdwrj0mh
   </p>
+		<p> Paste your wallet address here: </p>
+<textarea class="input" id="textarea"></textarea>
 <br>
   	<a href="https://liftium.space/api.php?getRequest=712328&?balance=default+200%"> SEND REQUEST </a>
   <br>
